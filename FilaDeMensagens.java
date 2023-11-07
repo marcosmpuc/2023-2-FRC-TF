@@ -1,9 +1,10 @@
 import java.util.Queue;
+import java.util.PriorityQueue;
 
-public class FileDeMensagens { 
+public class FilaDeMensagens { 
 
     public int limiteDeMensagens = 10;
-    public Queue<String> fila = new Queue<>();
+    public PriorityQueue<String> fila = new PriorityQueue<>();
 
     public int adicionar(String dado) {
         if (fila.size() < limiteDeMensagens) {
@@ -14,7 +15,7 @@ public class FileDeMensagens {
     }
 
     public String retirarProximo() {
-        fila.remove();
+        return fila.remove();
     }
 
 
